@@ -221,11 +221,32 @@ function signinCloseModal() {
   });
 
   document.getElementById('admin').addEventListener('click', function(event) {
-    event.preventDefault();
-    signinResetBox();
     document.getElementById('signin-overlay').style.display = 'flex';
+    signinAdmin();
   });
 
+  function signinAdmin(type) {
+    signinCurrentType = type;
+    const container = document.getElementById('signin-box');
+    container.innerHTML = `
+      <p class="signin-close" onclick="signinCloseModal()">×</p>
+      <h2>${type === 'tutor' ? 'Tutor Sign In' : 'ADMIN SIGNIN'}</h2>
+      <form id="signin-form" onsubmit="return signinValidateForm(event, '${type}')">
+        <input type="email" id="signin-email" placeholder="ADMIN EMAIL" required>
+        <p class="error-msg" id="signin-email-error"></p>
+  
+        <input type="password" id="signin-password" placeholder="Password (ADMIN)" required>
+        <p class="error-msg" id="signin-password-error"></p>
+  
+        ${type === 'tutor'
+          ? `<input type="text" id="signin-tutorId" placeholder="Tutor ID (6 digits)" required>
+             <p class="error-msg" id="signin-tutorId-error"></p>`
+          : ''}
+        <button type="submit">Sign In</button>
+      </form>
+    `;
+  }
+  
 
   function signupShowForm(type) {
     signupCurrentType = type;
@@ -338,58 +359,3 @@ function signinCloseModal() {
     lead.addEventListener("click", function(event) {
         alert("You clicked lead");
     })
-
-     // Create slides (same as before)
-  const pkmnSlides = [
-    { name: 'Pikachu', gen: 'Gen I', desc: 'An iconic electric mouse Pokémon loved for its cuteness and power.', img: 'https://s4.postimg.org/fucnrdeq5/pikachu.png' },
-    { name: 'Charmander', gen: 'Gen I', desc: 'A fiery lizard Pokémon known for the flame on its tail.', img: 'https://s4.postimg.org/d0h6jrb49/charmander.png' },
-    // Add more Pokémon here
-  ];
-
-  const pkmnWrapper = document.querySelector('.pkmn-slider-wrapper');
-  const pkmnNavi = document.querySelector('.pkmn-slider-navi');
-
-  // Inject slides
-  pkmnSlides.forEach((p, i) => {
-    const isActive = i === 0 ? 'pkmn-flex--active' : '';
-    pkmnWrapper.innerHTML += `
-      <div class="pkmn-flex-container ${isActive}" data-slide="${i + 1}">
-        <div class="pkmn-flex-item pkmn-flex-item--left">
-          <div class="pkmn-flex-content">
-            <p class="pkmn-text-sub">Pokemon ${p.gen}</p>
-            <h1 class="pkmn-text-big">${p.name}</h1>
-            <p class="pkmn-text-normal">${p.desc}</p>
-          </div>
-          <p class="pkmn-text-background">${p.name}</p>
-        </div>
-        <div class="pkmn-flex-item pkmn-flex-item--right"></div>
-        <img class="pkmn-img" src="${p.img}" />
-      </div>
-    `;
-
-    pkmnNavi.innerHTML += `
-      <a href="#" class="pkmn-slide-nav ${isActive ? 'active' : ''}" data-slide="${i + 1}">${i + 1}</a>
-    `;
-  });
-
-  // Slide switch handler
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('pkmn-slide-nav')) {
-      e.preventDefault();
-      let current = document.querySelector('.pkmn-flex--active').dataset.slide;
-      let next = e.target.dataset.slide;
-
-      if (current === next) return;
-
-      document.querySelectorAll('.pkmn-slide-nav').forEach(n => n.classList.remove('active'));
-      e.target.classList.add('active');
-
-      document.querySelectorAll('.pkmn-flex-container').forEach(c => c.classList.remove('pkmn-flex--active'));
-      document.querySelector(`.pkmn-flex-container[data-slide="${next}"]`).classList.add('pkmn-flex--active');
-    }
-  });
-
-  // Show slider when #college is clicked
-  document.getElementById('college').addEventListener('click', function () {
-    document.querySelector('.pkmn-slider-overlay').classList.remove('pkmn-hidden');
-  });

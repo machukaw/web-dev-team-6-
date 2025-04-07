@@ -532,7 +532,7 @@ nav ul li a {
   .devs-carousel > div:nth-of-type(5) {
     background: url("image/landingPage/omamalin.png") no-repeat center center/cover;
   }
-  
+
   .signin-overlay {
     position: fixed;
     top: 0;
