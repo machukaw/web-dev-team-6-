@@ -518,19 +518,19 @@ nav ul li a {
   
   /* Individual Backgrounds */
   .devs-carousel > div:nth-of-type(1) {
-    background: url("ando1.png") no-repeat center center/cover;
+    background: url("image/ando1.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(2) {
-    background: url("paolo1.jpg") no-repeat center center/cover;
+    background: url("image/paolo1.jpg") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(3) {
-    background: url("temp.png") no-repeat center center/cover;
+    background: url("image/temp.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(4) {
-    background: url("kevin.png") no-repeat center center/cover;
+    background: url("image/kevin.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(5) {
-    background: url("omamalin.png") no-repeat center center/cover;
+    background: url("image/omamalin.png") no-repeat center center/cover;
   }
   
   .signin-overlay {
