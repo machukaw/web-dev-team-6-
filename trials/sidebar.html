@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.nav__cont {
+  position: fixed;
+  width: 60px;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  background-color: #7D0A0A;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  cursor: pointer;
+  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 80px;
+  }
+}
+
+.nav {
+  list-style-type: none;
+  color: #EEEEEE; 
+
+  &:first-child {
+    padding-top: 1.5rem;
+  }
+}
+
+.nav__items {
+  padding-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+
+  a {
+    position: relative;
+    display: block;
+    top: -35px;
+    padding-left: 25px;
+    padding-right: 15px;
+    margin-left: 25px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #EEEEEE;
+    font-weight: 300;
+    font-size: 1.35em;
+    transition: all 0.3s ease;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 2px;
+      background: radial-gradient(circle at 94.02% 88.03%, #BF3131, transparent 100%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: -10;
+    }
+  }
+
+  &:hover a {
+    color: #EAD196;
+  }
+
+  &:hover a:after {
+    opacity: 1;
+  }
+
+  img {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    left: -25px;
+    cursor: pointer;
+    fill: #EEEEEE;
+
+    transition: fill 0.3s ease;
+
+    @media screen and (min-width: 600px) {
+      width: 32px;
+      height: 32px;
+      left: -15px;
+    }
+  }
+
+  &:hover svg {
+    fill: #EAD196; 
+  }
+}
+
+    </style>
+</head>
+<body>
+      <nav class="nav__cont">
+        <ul class="nav">
+          <li class="nav__items ">
+            <img src="image\landingPage\icons\homeIcon.png" alt="">
+            <a href="">Home</a>
+          </li>
+          
+          <li class="nav__items ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26" fill="#EAD196" style="margin-right: 8px;">
+                <path fill="#EAD196" d="M22.9,20.1h-1.5l-0.5-0.5c1.8-2.1,2.9-4.8,2.9-7.7C23.8,5.3,18.5,0,11.9,0S0,5.3,0,11.9s5.3,11.9,11.9,11.9
+                  c3,0,5.7-1.1,7.7-2.9l0.5,0.5v1.4l9.1,9.1l2.7-2.7L22.9,20.1z M11.9,20.1c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2
+                  S16.4,20.1,11.9,20.1z"/>
+              </svg>
+            <a href="">Search</a>
+          </li>
+            
+          <li class="nav__items ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#EAD196" style="margin-right: 8px;">
+                <path fill="#EAD196" d="M24 0H8C6.9 0 6 .9 6 2v28c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 28H8V4h16v24z"/>
+                <path fill="#7D0A0A" d="M10 6h12v2H10z"/>
+              </svg>
+           <a href="">Map</a>
+          </li>
+            
+          <li class="nav__items ">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26" fill="#EAD196" style="margin-right: 8px;">
+                <path fill="#EAD196" d="M24 2C12.95 2 4 10.95 4 22s8.95 20 20 20 20-8.95 20-20S35.05 2 24 2z"/>
+                <path fill="#7D0A0A" d="M24 24c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+              </svg>
+            <a href="">Planner</a>
+          </li>
+              
+        </ul>
+      </nav>
+    
+        <div class="wrapper">
+          <main>
+            
+          </main>
+        </div>
+      
+      
+</body>
+</html>
