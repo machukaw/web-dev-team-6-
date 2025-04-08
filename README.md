@@ -8,3 +8,12 @@ Features:
     Quizes every after session
     leaderboards of tutors 
     Streak for students and their progress
+
+---Note---
+To open the main page you must sign in with the following details: 
+    Admin: 
+        Email: admin@wmsu.edu.ph
+        Pass: admin12345
+    User: 
+        Email: user@wmsu.edu.ph
+        Pass: user12345
