@@ -1,74 +1,69 @@
-let signinCurrentType = null;
 
-document.getElementById('sign').addEventListener('click', function(event) {
-  event.preventDefault();
-  signinResetBox();
-  document.getElementById('signin-overlay').style.display = 'flex';
-});
-
-
-function signinShowForm(type) {
-  signinCurrentType = type;
+//Sign in logic
+function signinAdmin() {
   const container = document.getElementById('signin-box');
   container.innerHTML = `
     <p class="signin-close" onclick="signinCloseModal()">×</p>
-    <h2>${type === 'tutor' ? 'Tutor Sign In' : 'Tutee Sign In'}</h2>
-    <form id="signin-form" onsubmit="return signinValidateForm(event, '${type}')">
+    <h2>Sign In</h2>
+    <form id="signin-form" onsubmit="return signinValidateForm(event)">
       <input type="email" id="signin-email" placeholder="Email (@wmsu.edu.ph)" required>
       <p class="error-msg" id="signin-email-error"></p>
 
-      <input type="password" id="signin-password" placeholder="Password (8 characters)" required>
+      <input type="password" id="signin-password" placeholder="Password" required>
       <p class="error-msg" id="signin-password-error"></p>
-
-      ${type === 'tutor'
-        ? `<input type="text" id="signin-tutorId" placeholder="Tutor ID (6 digits)" required>
-           <p class="error-msg" id="signin-tutorId-error"></p>`
-        : ''}
 
       <p style="margin-top: 5px; font-size: 14px;">
         <a href="#" onclick="signinShowForgotPassword()" style="color: black;">Forgot password?</a>
       </p>
-
       <button type="submit">Sign In</button>
     </form>
   `;
 }
 
-function signinValidateForm(event, type) {
-  event.preventDefault();
-  let isValid = true;
 
-  const email = document.getElementById('signin-email').value;
-  const password = document.getElementById('signin-password').value;
+document.getElementById('sign').addEventListener('click', function(event) {
+  document.getElementById('signin-overlay').style.display = 'flex';
+  signinAdmin();
+});
+
+
+
+function signinValidateForm(event) {
+  event.preventDefault();
+
+  const email = document.getElementById('signin-email').value.trim();
+  const password = document.getElementById('signin-password').value.trim();
+
+  let isValid = true;
 
   document.getElementById('signin-email-error').textContent = '';
   document.getElementById('signin-password-error').textContent = '';
-  if (type === 'tutor') {
-    document.getElementById('signin-tutorId-error').textContent = '';
-  }
 
   if (!email.endsWith('@wmsu.edu.ph')) {
     document.getElementById('signin-email-error').textContent = 'Email must be @wmsu.edu.ph';
     isValid = false;
   }
 
-  if (password.length !== 8) {
-    document.getElementById('signin-password-error').textContent = 'Password must be exactly 8 characters';
+  if (password.length < 8) {
+    document.getElementById('signin-password-error').textContent = 'Password must be at least 8 characters';
     isValid = false;
   }
 
-  if (type === 'tutor') {
-    const tutorId = document.getElementById('signin-tutorId').value;
-    if (!/^\d{6}$/.test(tutorId)) {
-      document.getElementById('signin-tutorId-error').textContent = 'Tutor ID must be 6 digits';
-      isValid = false;
+  if (isValid) {
+    if (email === 'admin@wmsu.edu.ph' && password === 'admin12345') {
+      alert('Logged in as Admin');
+      signinCloseModal();
+    } else if (email === 'user@wmsu.edu.ph' && password === 'user12345') {
+      alert('Logged in as User');
+      signinCloseModal();
+    } else {
+      document.getElementById('signin-password-error').textContent = 'Invalid email or password';
     }
   }
 
-  if (isValid) {
-    signinCloseModal();
-  }
+  return false; 
 }
+
 
 function signinShowForgotPassword() {
   const container = document.getElementById('signin-box');
@@ -78,12 +73,8 @@ function signinShowForgotPassword() {
     <form id="forgot-form" onsubmit="return false;">
       <input type="email" id="forgot-email" placeholder="Email (@wmsu.edu.ph)" required>
       <p class="error-msg" id="forgot-email-error"></p>
-
       <button type="button" id="send-code-btn" onclick="signinSendCode()">Send Code</button>
     </form>
-    <p style="margin-top: 15px; font-size: 14px;">
-      <a href="#" onclick="signinShowForm(signinCurrentType)" style="color: black;">Back to sign in</a>
-    </p>
   `;
 }
 
@@ -101,7 +92,7 @@ function signinSendCode() {
 
   if (!document.getElementById('forgot-code')) {
     const codeInput = document.createElement('input');
-    codeInput.type = 'text'; // No arrow buttons
+    codeInput.type = 'text'; 
     codeInput.id = 'forgot-code';
     codeInput.placeholder = 'Enter 6-digit code';
     codeInput.required = true;
@@ -131,7 +122,6 @@ function signinConfirmCode() {
   const form = document.getElementById('forgot-form');
   document.getElementById('send-code-btn').remove();
 
-  // New password input
   const newPassInput = document.createElement('input');
   newPassInput.type = 'password';
   newPassInput.id = 'new-password';
@@ -142,7 +132,6 @@ function signinConfirmCode() {
   newPassError.className = 'error-msg';
   newPassError.id = 'new-password-error';
 
-  // Confirm password input
   const confirmPassInput = document.createElement('input');
   confirmPassInput.type = 'password';
   confirmPassInput.id = 'confirm-password';
@@ -153,7 +142,7 @@ function signinConfirmCode() {
   confirmPassError.className = 'error-msg';
   confirmPassError.id = 'confirm-password-error';
 
-  // Submit button
+
   const resetBtn = document.createElement('button');
   resetBtn.type = 'button';
   resetBtn.textContent = 'Reset Password';
@@ -193,68 +182,28 @@ function signinResetPassword() {
     <p style="color: green; font-weight: bold; text-align: center; margin-bottom: 20px;">
       Password changed successfully!
     </p>
-    <button onclick="signinShowForm(signinCurrentType)">Back to Sign In</button>
+    <button onclick="function signinAdmin()">Back to Sign In</button>
   `;
 }
-}
-
-function signinResetBox() {
-  const container = document.getElementById('signin-box');
-  container.innerHTML = `
- <p class="signin-close" onclick="signinCloseModal()">×</p>
-    <h2>Sign in as:</h2>
-    <button onclick="signinShowForm('tutor')">Sign in as Tutor</button>
-    <button onclick="signinShowForm('tutee')">Sign in as Tutee</button>
-  `;
 }
 
 function signinCloseModal() {
   document.getElementById('signin-overlay').style.display = 'none';
-  signinResetBox();
 }
 
-
+//Sign up logic
   document.getElementById('signup').addEventListener('click', function(event) {
-    event.preventDefault();
-    signupResetBox();
+    signupShowForm();
     document.getElementById('signup-overlay').style.display = 'flex';
   });
 
-  document.getElementById('admin').addEventListener('click', function(event) {
-    document.getElementById('signin-overlay').style.display = 'flex';
-    signinAdmin();
-  });
 
-  function signinAdmin(type) {
-    signinCurrentType = type;
-    const container = document.getElementById('signin-box');
-    container.innerHTML = `
-      <p class="signin-close" onclick="signinCloseModal()">×</p>
-      <h2>${type === 'tutor' ? 'Tutor Sign In' : 'ADMIN SIGNIN'}</h2>
-      <form id="signin-form" onsubmit="return signinValidateForm(event, '${type}')">
-        <input type="email" id="signin-email" placeholder="ADMIN EMAIL" required>
-        <p class="error-msg" id="signin-email-error"></p>
-  
-        <input type="password" id="signin-password" placeholder="Password (ADMIN)" required>
-        <p class="error-msg" id="signin-password-error"></p>
-  
-        ${type === 'tutor'
-          ? `<input type="text" id="signin-tutorId" placeholder="Tutor ID (6 digits)" required>
-             <p class="error-msg" id="signin-tutorId-error"></p>`
-          : ''}
-        <button type="submit">Sign In</button>
-      </form>
-    `;
-  }
-  
-
-  function signupShowForm(type) {
-    signupCurrentType = type;
+  function signupShowForm() {
     const container = document.getElementById('signup-box');
     container.innerHTML = `
       <button class="signup-close" onclick="signupCloseModal()">×</button>
-      <h2>${type === 'tutor' ? 'Tutor Sign Up' : 'Tutee Sign Up'}</h2>
-      <form id="signup-form" onsubmit="return signupValidateForm(event, '${type}')">
+      <h2>Sign Up</h2>
+      <form id="signup-form" onsubmit="return signupValidateForm(event)">
         <input type="email" id="signup-email" placeholder="Email (@wmsu.edu.ph)" required>
         <p class="error-msg" id="signup-email-error"></p>
 
@@ -279,7 +228,7 @@ function signinCloseModal() {
     `;
   }
 
-  function signupValidateForm(event, type) {
+  function signupValidateForm(event) {
     event.preventDefault();
     let isValid = true;
 
@@ -326,23 +275,14 @@ function signinCloseModal() {
     }
   }
 
-  function signupResetBox() {
-    const container = document.getElementById('signup-box');
-    container.innerHTML = `
-      <button class="signup-close" onclick="signupCloseModal()">×</button>
-      <h2>Sign Up as:</h2>
-      <button onclick="signupShowForm('tutor')"  class="signup-action">Sign Up as Tutor</button>
-      <button onclick="signupShowForm('tutee')"  class="signup-action">Sign Up as Tutee</button>
-    `;
-  }
-
   function signupCloseModal() {
     document.getElementById('signup-overlay').style.display = 'none';
     signupResetBox();
   }
 
 
-      const hustle = document.querySelector("#hustle");
+    //Image animation logic
+    const hustle = document.querySelector("#hustle");
     hustle.addEventListener("click", function(event) {
         alert("You clicked Hustle");
     })  
