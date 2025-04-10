@@ -1,1 +1,77 @@
+@ -0,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/adminPage/admin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="#" class="active" onclick="showSection('dashboard')">Dashboard</a>
+    <a href="#" onclick="showSection('users')">Manage Users</a>
+    <a href="#" onclick="showSection('reports')">Reports</a>
+    <button class="logout-btn" onclick="logout()">Logout<link src = "formenu.html"></button>
+  </div>
+
+  <div class="main">
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="content-section active">
+      <h1>Welcome to the Dashboard</h1>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h2>24</h2>
+          <p>Total Users</p>
+        </div>
+        <div class="card">
+          <h2>3</h2>
+          <p>Admins</p>
+        </div>
+        <div class="card">
+          <h2>7</h2>
+          <p>New Signups</p>
+        </div>
+        <div class="card">
+          <h2>5</h2>
+          <p>Reports Generated</p>
+        </div>
+      </div>
+      <canvas id="dashboardChart" width="400" height="200" style="margin-top: 40px;"></canvas>
+    </section>
+
+    <!-- MANAGE USERS -->
+    <section id="users" class="content-section">
+      <h1>Manage Users</h1>
+      <div class="user-form">
+        <input type="text" id="newUsername" placeholder="Username" />
+        <input type="text" id="newRole" placeholder="Role (e.g., Admin)" />
+        <button onclick="addUser()">Add User</button>
+      </div>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- Dynamic rows go here -->
+        </tbody>
+      </table>
+    </section>
     
+
+    <!-- REPORTS -->
+    <section id="reports" class="content-section">
+      <h1>Reports</h1>
+      <p>Generate and view system reports here.</p>
+    </section>
+    <script src="js/landingPage/admin.js"></script>
+  </div>

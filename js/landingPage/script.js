@@ -51,8 +51,7 @@ function signinValidateForm(event) {
 
   if (isValid) {
     if (email === 'admin@wmsu.edu.ph' && password === 'admin12345') {
-      alert('Logged in as Admin');
-      signinCloseModal();
+      window.location.href = 'adminPage.html'
     } else if (email === 'user@wmsu.edu.ph' && password === 'user12345') {
       window.location.href = 'userPage.html'
     } else {
