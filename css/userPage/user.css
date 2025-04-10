@@ -1,3 +1,15 @@
+*{
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --dark-red: #7D0A0A;
+  --light-red: #BF3131;
+  --gold: #EAD196;
+  --light-bg: #EEEEEE;
+}
+
 .nav__cont {
     position: fixed;
     width: 60px;
@@ -8,8 +20,8 @@
     overflow: hidden;
     transition: width 0.3s ease;
     cursor: pointer;
-    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
-  
+    box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.4);
+
     &:hover {
       width: 300px;
     }
@@ -24,12 +36,12 @@
     color: #EEEEEE; 
   
     &:first-child {
-      padding-top: 1.5rem;
+      padding-top: 0.5rem;
     }
   }
   
   body{
-    background: linear-gradient(to left, #c97a7a, #BF3131);
+    background-color:  #EEEEEE;;
   }
   
   .nav__items {
@@ -94,132 +106,226 @@
       fill: #EAD196; 
     }
   }
+.mainContainer{
+  width: 92%;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+}
+.feed{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  font-weight: bold;
+  color: #7D0A0A;
+  font-size: 1.7rem;
+  z-index: 100;
+}
 
-  .container{
-    margin-left: 5.5%;
-    display: flex;
-    flex-direction: column;
-    width: 75vw;
-  }
+.addPost {
+  width: 70%;
+  padding: 2%;
+  border: 2px solid var(--dark-red);
+  border-radius: 30px;
+  background-color: var(--light-bg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-  .post-section {
-    width: 100%;
-    height: 30vh;
-    border: 2px solid #EAD196;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #7D0A0A, #BF3131);
-    padding: 2vh;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    gap: 1vw;
-    margin-top: 2%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    color: #EAD196;
-  }
-  
-  .post-section:hover {
-    transform: translateY(-4px);
-  }
-  
-  .profilePic {
-    width: 20vh;
-    height: 20vh;
-    border: 3px solid #EAD196;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #EEEEEE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 0 5px rgba(234, 209, 150, 0.3);
-  }
-  
-  .profilePic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    color: #EAD196;
-  }
-  
-  .name {
-    font-size: 5.5vh;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #EAD196;
-  }
-  
-  .details {
-    font-size: 2.8vh;
-    margin-top: -2vh;
-    color: #EAD196;
-  }
-  
-  .studentID {
-    margin-right: 1vw;
-    font-weight: 600;
-  }
-  
-  .college {
-    font-style: italic;
-  }
-  
-  .subject {
-    font-size: 4.3vh;
-    font-weight: bold;
-    margin: 0.5vh 0;
-    color: #EAD196;
-  }
-  
-  .captionBox {
-    background-color: rgba(234, 209, 150, 0.1);
-    padding: 0.7vh 1vh;
-    font-size: 1.6vh;
-    border: 1px dashed #EAD196;
-    color: #EAD196;
-    border-radius: 10px;
-    max-width: 90%;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    flex-shrink: 0;
-    margin-left: 1vw;
-  }
-  
-  .book,
-  .view {
-    padding: 1.5vh 3.2vh;
-    font-size: 1.6vh;
-    border: 2px solid #EAD196;
-    background-color: transparent;
-    color: #EAD196;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .book:hover,
-  .view:hover {
-    background-color: #EAD196;
-    color: #7D0A0A;
-    transform: scale(1.05);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-  }
-  
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.image-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--dark-red);
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.image-circle > img{
+  width: 100%;
+  height: auto;
+}
+.subject-input {
+  flex-grow: 1;
+}
+
+.subject-input input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid var(--dark-red);
+  font-size: 18px;
+  color: var(--dark-red);
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--dark-red);
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--dark-red);
+  border-radius: 10px;
+  background-color: white;
+  color: var(--dark-red);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 22px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid var(--dark-red);
+  border-radius: 12px;
+  background-color: var(--dark-red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover:enabled {
+  background-color: var(--light-red);
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #555;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+
+#message {
+  color: var(--dark-red);
+  margin-top: 15px;
+  font-weight: bold;
+}
+#showFormBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--dark-red);
+  color: white;
+  border: 2px solid var(--dark-red);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+#showFormBtn:hover {
+  background-color: var(--light-red);
+}
+
+.card {
+  background: #fff;
+  border: 2px solid var(--dark-red);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 900px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  color: var(--dark-red);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.infos .name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.infos .studentID,
+.infos .college,
+.infos .points {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.infos .studentID,
+.infos .college{
+  display: inline-block;
+}
+
+.subject-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.date-label,
+.time-label {
+  font-size: 1.7rem;
+}
+
+.book-now {
+  background: var(--light);
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 20px 50px;
+  border: 2px solid red;
+  margin-top: -1%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-now:hover {
+  background: red;
+  color: white;
+}
+.dash{
+  width: 25%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}

@@ -42,188 +42,55 @@
       </nav>
     
     <main>
-      <div class="container">
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
+      <div class="mainContainer">
+        <div class="feed">
+          <div class="logo">
+            <h1>Looking For Tutor</h1>
           </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
+          <div class="addPost">
+            <button id="showFormBtn">Set/Post Tutoring Session</button>
+          
+            <div id="formContent" style="display: none;">
+              <div class="top-section">
+                <div class="image-circle">
+                  <img src="image/landingPage/ando.png" alt="">
+                </div>
+                <div class="subject-input">
+                  <input type="text" id="subject" placeholder="Input Subject">
+                </div>
+              </div>
+          
+              <div class="bottom-section">
+                <div class="form-group">
+                  <label for="date">Set Meeting Date</label>
+                  <input type="date" id="date">
+                </div>
+          
+                <div class="form-group">
+                  <label for="timeIn">Set Time In</label>
+                  <input type="time" id="timeIn">
+                </div>
+          
+                <div class="form-group">
+                  <label for="timeOut">Set Time Out</label>
+                  <input type="time" id="timeOut">
+                </div>
+          
+                <div class="form-group">
+                  <button id="postBtn" disabled>Post</button>
+                </div>
+              </div>
+          
+              <p id="message"></p>
+            </div>
           </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div class="post" id="postsContainer"></div>
+
         </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-      <section class="post-section">
-        <div class="profilePic">
-          <img src="profile.jpg" alt="Profile Picture" />
-        </div>
-        <div class="info">
-          <div class="name">Ando, Mark John S</div>
-          <div class="details">
-            <span class="studentID">2024-03655</span>
-            <span class="college">College Of Computing Studies</span>
-          </div>
-          <div class="subject">Computer Programming 1 (CC101)</div>
-          <div class="captionBox">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-        <div class="actions">
-          <button class="book">Book now</button>
-          <button class="view">View Profile</button>
-        </div>
-      </section>
-    </div>           
+        <div class="dash"></div>
+      </div>       
     </main>
+
+    <script src="js/landingPage/user.js"></script>
 </body>
 </html>
