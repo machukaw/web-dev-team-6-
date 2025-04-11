@@ -91,3 +91,4 @@ postBtn.addEventListener("click", () => {
   addPostDiv.style.boxShadow = "none";
   addPostDiv.style.marginTop = "-5%";
 });
+
