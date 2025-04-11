@@ -50,6 +50,7 @@ function formatTimeTo12Hour(timeStr) {
 
 // Post the card
 postBtn.addEventListener("click", () => {
+  document.getElementById("noPostMessage")?.remove();
   const newCard = document.createElement("div");
   newCard.classList.add("card");
 
@@ -72,6 +73,12 @@ postBtn.addEventListener("click", () => {
       <div class="date-label"><strong>Date:</strong> ${date.value}</div>
       <div class="time-label"><strong>Time:</strong> ${formattedTime}</div>
       <button class="book-now">Book now</button>
+
+      <div class="confirm-overlay">
+        <p>Confirm Booking?</p>
+        <button class="confirm-yes">Yes</button>
+        <button class="confirm-no">No</button>
+      </div>
     </div>
   `;
 
@@ -90,5 +97,25 @@ postBtn.addEventListener("click", () => {
   addPostDiv.style.border = "none";
   addPostDiv.style.boxShadow = "none";
   addPostDiv.style.marginTop = "-5%";
-});
 
+
+  const bookBtn = newCard.querySelector(".book-now");
+  const confirmOverlay = newCard.querySelector(".confirm-overlay");
+  const confirmYes = newCard.querySelector(".confirm-yes");
+  const confirmNo = newCard.querySelector(".confirm-no");
+
+  bookBtn.addEventListener("click", () => {
+    confirmOverlay.style.display = "flex";
+  });
+
+  confirmNo.addEventListener("click", () => {
+    confirmOverlay.style.display = "none";
+  });
+
+  confirmYes.addEventListener("click", () => {
+    newCard.classList.add("slide-out");
+    setTimeout(() => {
+      newCard.remove();
+    }, 500);
+  });
+});

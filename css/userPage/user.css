@@ -111,6 +111,7 @@
   margin-left: 8%;
   display: flex;
   align-items: center;
+  background-color: #EEEEEE;
 }
 .feed{
   width: 75%;
@@ -324,83 +325,117 @@ button:disabled {
   color: white;
 }
 .dash {
-  width: 25%;
+  width: 17%;
   height: 100vh;
-  border: 1px solid black;
+  border-left: 3px solid gray;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: #fff;
+  background-color: #7D0A0A;
   position: fixed;
   right: 0;
   top: 0;
 }
 
-.notification-card {
-  width: 90%;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.card {
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.notification-card.slide-out {
+.slide-out {
   transform: translateX(100%);
   opacity: 0;
 }
 
-.notification-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #ddd;
-  margin-right: 1rem;
-  flex-shrink: 0;
+.confirm-overlay {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.notification-content {
-  flex: 1;
-}
-
-.notification-content .name {
+.confirm-overlay p {
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
-.notification-content .subject {
-  color: var(--dark-red);
-  font-weight: 600;
-}
-
-.notification-buttons {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.notification-buttons button {
-  padding: 0.3rem 0.6rem;
+.confirm-overlay button {
+  padding: 12px 24px;
+  font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 120px;
 }
 
-.notification-buttons .accept {
+.confirm-yes {
   background-color: #4CAF50;
   color: white;
 }
 
-.notification-buttons .reject {
-  background-color: white;
-  border: 2px solid red;
-  color: red;
+.confirm-yes:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.confirm-no {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-no:hover {
+  background-color: #d7372d;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#noPostMessage {
+  text-align: center;
+  color: var(--dark-red); 
+  background-color: #EEEEEE; 
+  border: none; 
+  border-radius: 16px;
+  width: 100%; 
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noPostMessage h2 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.no-post-image-container img {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  opacity: 0.8;
 }
