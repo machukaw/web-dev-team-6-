@@ -44,6 +44,242 @@
       <canvas id="dashboardChart" width="400" height="200" style="margin-top: 40px;"></canvas>
     </section>
 
+    <div class="tracker-leaderboard-wrapper">
+      <!-- Streak Tracker -->
+      <div class="streak-tracker">
+        <div class="flame-circle animated-flame">
+          <span>7</span>
+        </div>
+        <div class="week-days">
+          <div class="day active">S</div>
+          <div class="day active">S</div>
+          <div class="day active">M</div>
+          <div class="day active">T</div>
+          <div class="day active">W</div>
+          <div class="day active">T</div>
+          <div class="day active">F</div>
+        </div>
+        <h3>7 Day Streak!</h3>
+        <p>Complete a lesson every day to build your streak</p>
+      </div>
+    
+      <!-- Leaderboard with Edit Feature -->
+      <div class="leaderboard">
+        <h3>Leaderboard</h3>
+        <div class="leaderboard-list">
+          <!-- You can copy/edit these to update names/courses/points -->
+          <div class="leaderboard-entry" data-id="1">
+            <div class="profile-circle">JD</div>
+            <div class="info">
+              <input type="text" class="name" value="John Doe" disabled />
+              <input type="text" class="course" value="Math 101" disabled />
+            </div>
+            <div class="points-wrap">
+              <input type="number" class="points" value="120" disabled /> pts
+            </div>
+            <button class="edit-btn" onclick="toggleEdit(this)">Edit</button>
+          </div>
+          <!-- 14 more -->
+          <div class="leaderboard-entry" data-id="2"><div class="profile-circle">AM</div><div class="info"><input type="text" class="name" value="Alice Moore" disabled /><input type="text" class="course" value="Biology" disabled /></div><div class="points-wrap"><input type="number" class="points" value="115" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="3"><div class="profile-circle">RS</div><div class="info"><input type="text" class="name" value="Robert Smith" disabled /><input type="text" class="course" value="History" disabled /></div><div class="points-wrap"><input type="number" class="points" value="98" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="4"><div class="profile-circle">MG</div><div class="info"><input type="text" class="name" value="Maria Garcia" disabled /><input type="text" class="course" value="Physics" disabled /></div><div class="points-wrap"><input type="number" class="points" value="95" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="5"><div class="profile-circle">TW</div><div class="info"><input type="text" class="name" value="Tom Williams" disabled /><input type="text" class="course" value="Chemistry" disabled /></div><div class="points-wrap"><input type="number" class="points" value="93" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="6"><div class="profile-circle">CL</div><div class="info"><input type="text" class="name" value="Chloe Lee" disabled /><input type="text" class="course" value="English Lit" disabled /></div><div class="points-wrap"><input type="number" class="points" value="91" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="7"><div class="profile-circle">DM</div><div class="info"><input type="text" class="name" value="Daniel Miller" disabled /><input type="text" class="course" value="Comp Sci" disabled /></div><div class="points-wrap"><input type="number" class="points" value="89" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="8"><div class="profile-circle">SB</div><div class="info"><input type="text" class="name" value="Sophia Brown" disabled /><input type="text" class="course" value="Philosophy" disabled /></div><div class="points-wrap"><input type="number" class="points" value="87" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="9"><div class="profile-circle">LW</div><div class="info"><input type="text" class="name" value="Liam White" disabled /><input type="text" class="course" value="Economics" disabled /></div><div class="points-wrap"><input type="number" class="points" value="84" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="10"><div class="profile-circle">EZ</div><div class="info"><input type="text" class="name" value="Emma Zhao" disabled /><input type="text" class="course" value="Business" disabled /></div><div class="points-wrap"><input type="number" class="points" value="82" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="11"><div class="profile-circle">OG</div><div class="info"><input type="text" class="name" value="Oliver Green" disabled /><input type="text" class="course" value="Art" disabled /></div><div class="points-wrap"><input type="number" class="points" value="79" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="12"><div class="profile-circle">NB</div><div class="info"><input type="text" class="name" value="Noah Brown" disabled /><input type="text" class="course" value="Math 102" disabled /></div><div class="points-wrap"><input type="number" class="points" value="75" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="13"><div class="profile-circle">HJ</div><div class="info"><input type="text" class="name" value="Hannah Jones" disabled /><input type="text" class="course" value="Geography" disabled /></div><div class="points-wrap"><input type="number" class="points" value="73" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="14"><div class="profile-circle">CM</div><div class="info"><input type="text" class="name" value="Caleb Martin" disabled /><input type="text" class="course" value="Drama" disabled /></div><div class="points-wrap"><input type="number" class="points" value="71" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+          <div class="leaderboard-entry" data-id="15"><div class="profile-circle">ES</div><div class="info"><input type="text" class="name" value="Ella Scott" disabled /><input type="text" class="course" value="Env Sci" disabled /></div><div class="points-wrap"><input type="number" class="points" value="68" disabled /> pts</div><button class="edit-btn" onclick="toggleEdit(this)">Edit</button></div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleEdit(button) {
+        const entry = button.closest('.leaderboard-entry');
+        const inputs = entry.querySelectorAll('input');
+    
+        if (button.textContent === 'Edit') {
+          inputs.forEach(input => input.disabled = false);
+          button.textContent = 'Save';
+        } else {
+          inputs.forEach(input => input.disabled = true);
+          button.textContent = 'Edit';
+    
+          // Optionally log or save changes
+          const name = entry.querySelector('.name').value;
+          const course = entry.querySelector('.course').value;
+          const points = entry.querySelector('.points').value;
+          console.log(`Updated: ${name}, ${course}, ${points} pts`);
+        }
+      }
+    </script>
+    
+    <style>
+      .tracker-leaderboard-wrapper {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+      }
+    
+      .streak-tracker {
+        flex: 1 1 300px;
+        max-width: 400px;
+        background-color: #fff0f3;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .flame-circle {
+        background-color: #c8102e;
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: idleBounce 2s infinite ease-in-out;
+      }
+    
+      @keyframes idleBounce {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-4px) rotate(-2deg); }
+        50% { transform: translateY(2px) rotate(2deg); }
+        75% { transform: translateY(-2px) rotate(-1deg); }
+      }
+    
+      .week-days {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+      }
+    
+      .day {
+        background-color: #eee;
+        color: #999;
+        padding: 8px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .day.active {
+        background-color: #c8102e;
+        color: white;
+      }
+    
+      .leaderboard {
+        flex: 1 1 350px;
+        max-width: 450px;
+        background-color: #fff0f3;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+    
+      .leaderboard h3 {
+        text-align: center;
+        color: #c8102e;
+      }
+    
+      .leaderboard-list {
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 15px;
+      }
+    
+      .leaderboard-entry {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #ffe6eb;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+      }
+    
+      .profile-circle {
+        background: #c8102e;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .info input {
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        margin-bottom: 4px;
+        padding: 2px 4px;
+        font-weight: bold;
+        color: #333;
+      }
+    
+      .points-wrap {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: #c8102e;
+      }
+    
+      .points-wrap input {
+        width: 50px;
+        border: none;
+        background: transparent;
+        text-align: right;
+        font-size: 14px;
+        font-weight: bold;
+        color: #c8102e;
+      }
+    
+      .edit-btn {
+        background-color: #c8102e;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    
+      @media (max-width: 768px) {
+        .tracker-leaderboard-wrapper {
+          flex-direction: column;
+        }
+      }
+    </style>
+    
+
     <!-- MANAGE USERS -->
     <section id="users" class="content-section">
       <h1>Manage Users</h1>
