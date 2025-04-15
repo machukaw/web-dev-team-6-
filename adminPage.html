@@ -45,24 +45,76 @@
     </section>
 
     <div class="tracker-leaderboard-wrapper">
-      <!-- Streak Tracker -->
-      <div class="streak-tracker">
-        <div class="flame-circle animated-flame">
-          <span>7</span>
+     <!-- Admin Moderation Panel (Replaces Streak Tracker) -->
+<div class="moderation-panel">
+  <h3>Student Moderation Panel</h3>
+  <div class="student-list">
+    <!-- Repeat for 15 students -->
+    <!-- Sample Student -->
+    <div class="student-entry">
+      <div class="student-profile">
+        <div class="profile-icon">AB</div>
+        <div class="student-info">
+          <strong>Alex Brown</strong>
+          <div class="course">BSCS</div>
         </div>
-        <div class="week-days">
-          <div class="day active">S</div>
-          <div class="day active">S</div>
-          <div class="day active">M</div>
-          <div class="day active">T</div>
-          <div class="day active">W</div>
-          <div class="day active">T</div>
-          <div class="day active">F</div>
-        </div>
-        <h3>7 Day Streak!</h3>
-        <p>Complete a lesson every day to build your streak</p>
       </div>
-    
+      <div class="student-meta">
+        <span class="reports">Reports: 2</span>
+        <div class="actions">
+          <button class="approve">✔</button>
+          <button class="ban">✖</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- More students -->
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">CM</div><div class="student-info"><strong>Clara Mae</strong><div class="course">BSEd</div></div></div><div class="student-meta"><span class="reports">Reports: 1</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">JD</div><div class="student-info"><strong>James Dale</strong><div class="course">BSIT</div></div></div><div class="student-meta"><span class="reports">Reports: 3</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">KT</div><div class="student-info"><strong>Kim Torres</strong><div class="course">BSN</div></div></div><div class="student-meta"><span class="reports">Reports: 0</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">ML</div><div class="student-info"><strong>Mark Leo</strong><div class="course">BSCE</div></div></div><div class="student-meta"><span class="reports">Reports: 2</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">SA</div><div class="student-info"><strong>Sandy A.</strong><div class="course">BSA</div></div></div><div class="student-meta"><span class="reports">Reports: 4</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">TR</div><div class="student-info"><strong>Tristan Ray</strong><div class="course">BSME</div></div></div><div class="student-meta"><span class="reports">Reports: 1</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">VG</div><div class="student-info"><strong>Venus G.</strong><div class="course">BSIT</div></div></div><div class="student-meta"><span class="reports">Reports: 5</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">LM</div><div class="student-info"><strong>Leo Martinez</strong><div class="course">BSBA</div></div></div><div class="student-meta"><span class="reports">Reports: 3</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">NS</div><div class="student-info"><strong>Nina Santos</strong><div class="course">BSED</div></div></div><div class="student-meta"><span class="reports">Reports: 0</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">JO</div><div class="student-info"><strong>Jake Ortega</strong><div class="course">BSHRM</div></div></div><div class="student-meta"><span class="reports">Reports: 1</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">EZ</div><div class="student-info"><strong>Ella Z.</strong><div class="course">BSN</div></div></div><div class="student-meta"><span class="reports">Reports: 4</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">RJ</div><div class="student-info"><strong>Rey J.</strong><div class="course">BSCS</div></div></div><div class="student-meta"><span class="reports">Reports: 2</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+    <div class="student-entry"><div class="student-profile"><div class="profile-icon">KL</div><div class="student-info"><strong>Karen L.</strong><div class="course">BSBA</div></div></div><div class="student-meta"><span class="reports">Reports: 0</span><div class="actions"><button class="approve">✔</button><button class="ban">✖</button></div></div></div>
+  </div>
+</div>
+
+<!-- Banned Users Section -->
+<div class="banned-users-section">
+  <h2>Banned Students</h2>
+  <div class="banned-users-list">
+    <!-- One entry -->
+    <div class="banned-user-card">
+      <div class="user-info">
+        <div class="profile-icon">VG</div>
+        <div class="user-details">
+          <strong>Venus G.</strong>
+          <div class="ban-date">Banned: April 15, 2025 - 2:30 PM</div>
+        </div>
+      </div>
+      <button class="unban-button">Unban</button>
+    </div>
+
+    <!-- Add more banned students -->
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">TR</div><div class="user-details"><strong>Tristan Ray</strong><div class="ban-date">Banned: April 15, 2025 - 1:45 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">ML</div><div class="user-details"><strong>Mark Leo</strong><div class="ban-date">Banned: April 14, 2025 - 4:20 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">JD</div><div class="user-details"><strong>James Dale</strong><div class="ban-date">Banned: April 13, 2025 - 3:05 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">SA</div><div class="user-details"><strong>Sandy A.</strong><div class="ban-date">Banned: April 13, 2025 - 10:30 AM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">EZ</div><div class="user-details"><strong>Ella Z.</strong><div class="ban-date">Banned: April 12, 2025 - 9:15 AM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">LM</div><div class="user-details"><strong>Leo Martinez</strong><div class="ban-date">Banned: April 11, 2025 - 8:50 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">JO</div><div class="user-details"><strong>Jake Ortega</strong><div class="ban-date">Banned: April 11, 2025 - 6:30 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">RJ</div><div class="user-details"><strong>Rey J.</strong><div class="ban-date">Banned: April 10, 2025 - 4:20 PM</div></div></div><button class="unban-button">Unban</button></div>
+    <div class="banned-user-card"><div class="user-info"><div class="profile-icon">CM</div><div class="user-details"><strong>Clara Mae</strong><div class="ban-date">Banned: April 10, 2025 - 2:10 PM</div></div></div><button class="unban-button">Unban</button></div>
+  </div>
+</div>
+
+
       <!-- Leaderboard with Edit Feature -->
       <div class="leaderboard">
         <h3>Leaderboard</h3>
@@ -310,3 +362,24 @@
     </section>
     <script src="js/landingPage/admin.js"></script>
   </div>
+
+  <script>
+    // Listen for all clicks on Unban buttons
+    document.addEventListener("DOMContentLoaded", function () {
+      const unbanButtons = document.querySelectorAll(".unban-button");
+  
+      unbanButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          const card = this.closest(".banned-user-card");
+  
+          // Optional confirmation
+          const name = card.querySelector("strong").innerText;
+          const confirmUnban = confirm(`Unban ${name}?`);
+          if (confirmUnban) {
+            card.remove();
+          }
+        });
+      });
+    });
+  </script>
+  
