@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  color: var(--dark-red);
 }
 
 :root {
@@ -112,10 +113,11 @@
 .mainContainer{
   width: 92%;
   margin-left: 8%;
+  border: 5px solid var(--dark-red);
+  border-radius: 30px;
   display: flex;
   flex-direction: column; 
-  background-color: var(--light-bg);
-  padding: 20px; 
+  padding: 20px;
 }
 
 /* PROFILE CONTAINER */
@@ -123,9 +125,9 @@
   width: 100%;
   height: 40%;
   background-color: var(--light-bg);
-  display: flex; 
-  flex-direction: column; 
-  margin-bottom: 20px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .profilePicSection{
@@ -134,31 +136,41 @@
   background-color: var(--light-bg);
 }
 
-.profile{
-  width: ;
-  height: ;
-}
-
 .profileCov{
-  width: ;
-  height: ;
+  width: 100%; 
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: -75px;
+  display: block;
+  z-index: 1;
+  position: relative;
 }
 
 .profilePic{
-  width: 100px; 
-  height: 100px; 
+  width: 150px; 
+  height: 150px; 
   border-radius: 50%; 
+  border: 3px solid var(--dark-red);
   object-fit: cover; 
-  margin-right: 20px; 
+  margin-right: 20px;
+  z-index: 2;
+  position: relative;
 }
 
 .profileDetails{
+  margin-bottom: 30px;
   display: flex;
-  flex-direction: column; 
 }
 
-.profileDetails p {
-  margin: 2px 0; 
+.profileDetailsSection{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2000px;
+  /* OMG GUSTO KONA MATULOG */
+}
+
+.profileDetailsSection p {
 }
 
 /* POINTS SECTION */
@@ -178,26 +190,6 @@
   background-color: #f9f9f9;
   text-align: center;
   flex-grow: 1;
-}
-
-.box1{
-  width: ;
-  height: ;
-}
-
-.box2{
-  width: ;
-  height: ;
-}
-
-.box3{
-  width: ;
-  height: ;
-}
-
-.box4{
-  width: ;
-  height: ;
 }
 
 /* SCHEDULE CONTAINER */
