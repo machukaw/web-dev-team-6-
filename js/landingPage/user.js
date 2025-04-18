@@ -8,6 +8,7 @@ const message = document.getElementById("message");
 const showFormBtn = document.getElementById("showFormBtn");
 const formContent = document.getElementById("formContent");
 const addPostDiv = document.querySelector(".addPost");
+const feed = document.querySelector("#feed");
 
 // Initial styling (form hidden)
 addPostDiv.style.border = "none";
@@ -118,4 +119,64 @@ postBtn.addEventListener("click", () => {
       newCard.remove();
     }, 500);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dashNotif = document.querySelector(".dash .notification");
+  dashNotif.style.display = "none";
+
+  // Use event delegation on the whole document for dynamic posts
+  document.addEventListener("click", function (e) {
+    // When "Book now" is clicked
+    if (e.target.classList.contains("book-now")) {
+      const post = e.target.closest(".post");
+      const overlay = post.querySelector(".confirm-overlay");
+      overlay.style.display = "flex"; // Show the confirmation overlay
+    }
+
+    // When "No" is clicked in the confirmation
+    if (e.target.classList.contains("confirm-no")) {
+      const post = e.target.closest(".post");
+      const overlay = post.querySelector(".confirm-overlay");
+      overlay.style.display = "none";
+    }
+
+    // When "Yes" is clicked in the confirmation
+    if (e.target.classList.contains("confirm-yes")) {
+      const post = e.target.closest(".post");
+      const subject = post.querySelector(".subject-display").textContent;
+      const date = post.querySelector(".date-label").textContent;
+      const time = post.querySelector(".time-label").textContent;
+
+      // Create notification card
+      const notif = document.createElement("div");
+      notif.className = "notif-card";
+      notif.innerHTML = `
+        <div class="top-section">
+          <div class="image-circle">
+            <img src="image/landingPage/ando.png" alt="Profile Image">
+          </div>
+          <div class="information">
+            <div class="name">Ando, Mark John S.</div>
+            <div class="studentID">ID: 2024-03655</div>
+            <div>Applied As Student</div>
+            <div>Cick to view</div>
+          </div>
+        </div>
+      `;
+
+      dashNotif.appendChild(notif);
+      dashNotif.style.display = "block";
+      post.remove(); // remove the booked post
+    }
+  });
+});
+
+const home = document.querySelector('#home');
+home.addEventListener('click', function () {
+  window.location.href = 'Home.html';
+});
+const search = document.querySelector('#home');
+search.addEventListener('click', function () {
+  window.location.href = 'seach1.html';
 });
