@@ -289,9 +289,10 @@ nav ul li a {
 }
 
 .about-content > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #7D0A0A;
     text-align: center;
+    letter-spacing: 10px;
 }
 
 .about-content > p {
@@ -518,19 +519,19 @@ nav ul li a {
   
   /* Individual Backgrounds */
   .devs-carousel > div:nth-of-type(1) {
-    background: url("image/landingPage/ando1.png") no-repeat center center/cover;
+    background: url("../../image/landingPage/ando.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(2) {
-    background: url("image/landingPage/paolo1.jpg") no-repeat center center/cover;
+    background: url("../../image/landingPage/paolo1.jpg") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(3) {
-    background: url("image/landingPage/temp.png") no-repeat center center/cover;
+    background: url("../../image/landingPage/temp.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(4) {
-    background: url("image/landingPage/kevin.png") no-repeat center center/cover;
+    background: url("../../image/landingPage/kevin.png") no-repeat center center/cover;
   }
   .devs-carousel > div:nth-of-type(5) {
-    background: url("image/landingPage/omamalin.png") no-repeat center center/cover;
+    background: url("../../image/landingPage/omamalin.png") no-repeat center center/cover;
   }
 
   .signin-overlay {

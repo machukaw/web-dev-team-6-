@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  :root {
+    --dark-red: #7D0A0A;
+    --light-red: #BF3131;
+    --gold: #EAD196;
+    --light-bg: #EEEEEE;
+  }
+  
+  .nav__cont {
+      position: fixed;
+      width: 60px;
+      top: 0;
+      height: 100vh;
+      z-index: 100;
+      background-color: #7D0A0A;
+      overflow: hidden;
+      transition: width 0.3s ease;
+      cursor: pointer;
+      box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.4);
+  
+      &:hover {
+        width: 300px;
+      }
+    
+      @media screen and (min-width: 600px) {
+        width: 80px;
+      }
+    }
+    
+    .nav {
+      list-style-type: none;
+      color: #EEEEEE; 
+    
+      &:first-child {
+        padding-top: 0.5rem;
+      }
+    }
+    
+    body{
+      background-color:  #EEEEEE;;
+    }
+    
+    .nav__items {
+      padding-bottom: 2rem;
+      font-family: 'Roboto', sans-serif;
+    
+      a {
+        position: relative;
+        display: block;
+        top: -35px;
+        padding-left: 25px;
+        padding-right: 15px;
+        margin-left: 25px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #EEEEEE;
+        font-weight: 300;
+        font-size: 2em;
+        transition: all 0.3s ease;
+    
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 2px;
+          background: radial-gradient(circle at 94.02% 88.03%, #BF3131, transparent 100%);
+          opacity: 0;
+          transition: all 0.5s ease;
+          z-index: -10;
+        }
+      }
+    
+      &:hover a {
+        color: #EAD196;
+      }
+    
+      &:hover a:after {
+        opacity: 1;
+      }
+    
+      img {
+        width: 26px;
+        height: 26px;
+        position: relative;
+        left: -25px;
+        cursor: pointer;
+        fill: #EEEEEE;
+    
+        transition: fill 0.3s ease;
+    
+        @media screen and (min-width: 600px) {
+          width: 32px;
+          height: 32px;
+          left: -15px;
+        }
+      }
+    
+      &:hover svg {
+        fill: #EAD196; 
+      }
+    }
+
+    .mainContainer{
+        width: 92%;
+        height: auto;
+        margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #EEEEEE;
+        padding-top: 0%;
+        gap: 20px;
+      }
+  .logo{
+    display: flex;
+    font-weight: bold;
+    color: #7D0A0A;
+    font-size: 1.7rem;
+    z-index: 100;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  form input[type="text"] {
+    width: 100%;
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid var(--dark-red);
+    font-size: 18px;
+    color: var(--dark-red);
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input[type="button"] {
+    width: 15%;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: 2px solid var(--dark-red);
+    background-color: #BF3131;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input[type="button"]:hover {
+    background-color: darkred;
+  }
+select {
+    border-radius: 20px;
+    border: 2px solid var(--dark-red);
+    background-color: #BF3131;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.filter > select {
+  width: 80%;
+}
+.sort > select {
+  width: 70%;
+}
+select:hover {
+    background-color: darkred;
+}
+.sortNfilter{
+  display: flex;
+  gap: 50px;
+  margin-left: -2%;
+  color: #7D0A0A;
+  width: 70%;
+}
+.sort{
+  display: flex;
+  width: 35%;
+  align-items: center;
+  gap: 10px;
+}
+.filter{
+  display: flex;
+  width: 110%;
+  align-items: center;
+  gap: 10px;
+}
+.card {
+  background: #fff;
+  border: 2px solid var(--dark-red);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  width: 900px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  color: var(--dark-red);
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-circle img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.infos .name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.infos .studentID,
+.infos .college,
+.infos .points {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.infos .studentID,
+.infos .college {
+  display: inline-block;
+}
+
+.subject-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.date-label,
+.time-label {
+  font-size: 1.7rem;
+}
+
+.book-now {
+  background: var(--light);
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 20px 50px;
+  border: 2px solid red;
+  margin-top: -1%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-now:hover {
+  background: red;
+  color: white;
+}
+
+.slide-out {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.confirm-overlay {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.confirm-overlay p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.confirm-overlay button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.confirm-yes {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.confirm-yes:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.confirm-no {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-no:hover {
+  background-color: #d7372d;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
