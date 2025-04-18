@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Features</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #000;
+      --table-bg: #fff;
+      --table-border: #ccc;
+      --hover-bg: #f9f9f9;
+      --btn-bg: #8b0000;
+      --btn-hover-bg: #a30000;
+      --btn-text-color: #fff;
+      --header-bg: #8b0000;
+      --footer-bg: #333;
+      --footer-text-color: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #fff;
+      --table-bg: #1e1e1e;
+      --table-border: #444;
+      --hover-bg: #333;
+      --btn-bg: #444;
+      --btn-hover-bg: #555;
+      --btn-text-color: #fff;
+      --header-bg: #222;
+      --footer-bg: #111;
+      --footer-text-color: #ccc;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: var(--btn-text-color);
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text-color);
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: var(--btn-text-color);
+      background-color: var(--btn-bg);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .back-btn:hover {
+      background-color: var(--btn-hover-bg);
+    }
+
+    .dark-mode-toggle {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: var(--btn-text-color);
+      background-color: var(--btn-bg);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--btn-hover-bg);
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid var(--table-border);
+      border-radius: 5px;
+      background-color: var(--table-bg);
+      color: var(--text-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .student-table {
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid var(--table-border);
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background: var(--table-bg);
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--table-border);
+    }
+
+    th {
+      background-color: var(--hover-bg);
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: var(--hover-bg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Admin Dashboard - User Features
+  </header>
+
+  <h1>User Features</h1>
+
+  <!-- Back to Dashboard Button -->
+  <a href="adminPage2.html" class="back-btn">Back to Dashboard</a>
+
+  <!-- Dark Mode Toggle Button -->
+  <button class="dark-mode-toggle" id="darkModeToggle">Enable Dark Mode</button>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by name..." />
+  </div>
+
+  <!-- Student List Table -->
+  <div class="student-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th>Study Points</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+        <!-- Student rows will be dynamically populated -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    &copy; 2025 Admin Dashboard. All rights reserved.
+  </footer>
+
+  <script>
+    // Populate the student list and implement search functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const studentTableBody = document.getElementById('studentTableBody');
+      const searchInput = document.getElementById('searchInput');
+  
+      // Filipino names and courses
+      const filipinoNames = [
+        'Juan Dela Cruz', 'Maria Clara', 'Jose Rizal', 'Andres Bonifacio', 
+        'Gabriela Silang', 'Emilio Aguinaldo', 'Apolinario Mabini', 'Melchora Aquino',
+        'Lapu-Lapu', 'Manuel Quezon', 'Corazon Aquino', 'Ferdinand Marcos',
+        'Lea Salonga', 'Fernando Poe Jr.', 'Ninoy Aquino', 'Gloria Arroyo',
+        'Manny Pacquiao', 'Pia Wurtzbach', 'Catriona Gray', 'Jessica Soho'
+      ];
+  
+      const filipinoCourses = [
+        'BS Computer Science', 'BS Information Technology', 'BS Accountancy',
+        'BS Business Administration', 'BS Education', 'BS Nursing',
+        'BS Civil Engineering', 'BS Mechanical Engineering', 'BS Psychology',
+        'BS Tourism Management'
+      ];
+  
+      // Add your names with BS Computer Science
+      const yourNames = [
+        { name: 'Mark John Ando', course: 'BS Computer Science', studyPoints: 500 }, // Highest
+        { name: 'Paolo Garcia', course: 'BS Computer Science', studyPoints: 450 },  // Second highest
+        { name: 'Matthew Payopelin', course: 'BS Computer Science' },
+        { name: 'Kevin Caxiel', course: 'BS Computer Science' },
+        { name: 'Anthony Omamalin', course: 'BS Computer Science' }
+      ];
+  
+      // Generate 95 random students
+      const randomStudents = Array.from({ length: 95 }, () => ({
+        name: filipinoNames[Math.floor(Math.random() * filipinoNames.length)],
+        course: filipinoCourses[Math.floor(Math.random() * filipinoCourses.length)],
+        year: Math.floor(Math.random() * 4) + 1, // Random year between 1 and 4
+        studyPoints: Math.floor(Math.random() * 400) + 1 // Random points between 1 and 400
+      }));
+  
+      // Combine your names with random students
+      const students = [
+        ...yourNames.map(student => ({
+          ...student,
+          year: Math.floor(Math.random() * 4) + 1,
+          studyPoints: student.studyPoints || Math.floor(Math.random() * 400) + 1 // Assign random points if not already set
+        })),
+        ...randomStudents
+      ];
+  
+      // Function to render the student list
+      function renderStudentList(filteredStudents) {
+        studentTableBody.innerHTML = ''; // Clear the table body
+        filteredStudents.forEach(student => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${student.name}</td>
+            <td>${student.course}</td>
+            <td>${student.year}</td>
+            <td>${student.studyPoints}</td>
+          `;
+          studentTableBody.appendChild(row);
+        });
+      }
+  
+      // Initial render of all students
+      renderStudentList(students);
+  
+      // Search functionality
+      searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredStudents = students.filter(student =>
+          student.name.toLowerCase().includes(searchTerm)
+        );
+        renderStudentList(filteredStudents);
+      });
+    });
+  </script>
+  <script>
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+      // Toggle the 'dark-mode' class on the body
+      document.body.classList.toggle('dark-mode');
+  
+      // Update the button text based on the current mode
+      if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = 'Disable Dark Mode';
+      } else {
+        darkModeToggle.textContent = 'Enable Dark Mode';
+      }
+    });
+  </script>
+</body>
+</html>
