@@ -51,9 +51,9 @@ function signinValidateForm(event) {
 
   if (isValid) {
     if (email === 'admin@wmsu.edu.ph' && password === 'admin12345') {
-      window.location.href = 'adminPage.html'
+      window.location.href = 'adminPage.html';
     } else if (email === 'user@wmsu.edu.ph' && password === 'user12345') {
-      window.location.href = 'userPage.html'
+      window.location.href = 'UserHTML/Home.html';
     } else {
       document.getElementById('signin-password-error').textContent = 'Invalid email or password';
     }
@@ -279,21 +279,21 @@ function signinCloseModal() {
   }
 
 
-    //Image animation logic
-    const hustle = document.querySelector("#hustle");
-    hustle.addEventListener("click", function(event) {
-        alert("You clicked Hustle");
-    })  
-      const booking = document.querySelector("#booking");
-    booking.addEventListener("click", function(event) {
-        alert("You clicked Booking");
-    })
-      const quiz = document.querySelector("#quiz");
-    quiz.addEventListener("click", function(event) {
-        alert("You clicked Quiz");
-    })
-
-      const lead = document.querySelector("#lead");
-    lead.addEventListener("click", function(event) {
-        alert("You clicked lead");
-    })
+  $(document).ready(function() {
+    $("#hustle").on("click", function() {
+      alert("You clicked Hustle");
+    });
+  
+    $("#booking").on("click", function() {
+      alert("You clicked Booking");
+    });
+  
+    $("#quiz").on("click", function() {
+      alert("You clicked Quiz");
+    });
+  
+    $("#lead").on("click", function() {
+      alert("You clicked lead");
+    });
+  });
+  
