@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Leaderboards</title>
+      <link rel="stylesheet" href="leaderboards.css">
+    </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav__cont">
+      <ul class="nav">
+        <li class="nav__items">
+          <img src="image\landingPage\icons\homeIcon.png" alt="">
+          <a href="">Home</a>
+        </li>
+        <li class="nav__items">
+          <img src="image/landingPage/icons/searchIcon.png" alt="">
+          <a href="">Search</a>
+        </li>
+        <li class="nav__items">
+          <img src="image/landingPage/icons/schedIcon.png" alt="">
+          <a href="">Schedule</a>
+        </li>
+        <li class="nav__items">
+          <img src="image/landingPage/icons/quizIcon.png" alt="">
+          <a href="">Quiz</a>
+        </li>
+        <li class="nav__items">
+          <img src="image/landingPage/icons/leadIcon.png" alt="">
+          <a href="">Leaderboard</a>
+        </li>
+        <li class="nav__items">
+          <img src="image/landingPage/icons/profile-user.png" alt="">
+          <a href="">Profile</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="mainContainer">
+      <h1>LEADERBOARDS</h1>
+      
+      <!-- BUTTONS -->
+      <div class="button-container">
+        <button class="points-tutor">Tutor points</button>
+        <button class="points-streak">Streak points</button>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="leaderboard-section">
+          <div class="top-three">
+            <div class="top-box" id="top-two">TOP 2</div>
+            <div class="top-box" id="top-one">TOP 1</div>
+            <div class="top-box" id="top-three">TOP 3</div>
+          </div>
+          
+          <div class="top-others"> 
+            <div class="scrollable">
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+              <div class="other-box"></div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="main-section">
+          <div class="quiz-stats">
+            <h2>Points: N/A</h2>
+            <div class="quiz-chart">
+              <div class="circle">
+                <div class="quiz-text">100 Sessions</div>
+                <div class="left-text">25</div>
+                <div class="right-text">75</div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="quiz-history">
+            <h2>Rank: N/A</h2>
+            <div class="history-box"></div>
+            <div class="history-box"></div>
+            <div class="history-box"></div>
+            <div class="history-box"></div>
+            <div class="history-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="leaderboards/leaderboard.js"></script>
+  </body>
+</html>
