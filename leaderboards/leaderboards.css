@@ -190,32 +190,73 @@
   margin-bottom: 20px;
 }
 
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-container h1 {
+  font-size: 1.5em;
+  color: var(--dark-red);
+  margin: 0;
+  text-align: center;
+}
+
 .top-box {
   width: 240px;
   height: 150px;
   border: 1px solid var(--dark-red);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--light-bg);
 }
 
 #top-one {
   height: 200px;
-  font-weight: bold;
 }
 
 #top-two {
-  height: 150px;
-  font-weight: bold;
+  height: 185px;
 }
 
 #top-three {
-  height: 100px;
-  font-weight: bold;
+  height: 170px;
 }
 
-.scrollable{
+.top-pfp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--dark-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: var(--dark-red);
+}
+
+.top-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--dark-red);
+  text-align: center;
+}
+
+.top-points {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--dark-red);
+  text-align: center;
+}
+
+.scrollable {
   max-height: 400px; 
   overflow-y: auto;
   padding: 10px;
@@ -223,20 +264,126 @@
   border-radius: 10px;
 }
 
-.top-others {
+.scrollable::before {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  flex-direction: row;
+  padding: 10px;
+  font-weight: bold;
+  color: var(--dark-red);
+  margin-bottom: 10px;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  padding: 10px;
+  font-weight: bold;
+  color: var(--dark-red);
+  border-bottom: 1px solid var(--dark-red);
+  margin-bottom: 10px;
+}
+
+.header-pfp {
+  width: 30px;
+  margin-right: 15px;
+}
+
+.header-name-id {
+  width: 170px;
+  margin-right: 20px;
+}
+
+.header-college {
+  width: 125px;
+  margin-right: 20px;
+}
+
+.header-main-sub {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.header-sessions {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.header-points {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.header-rank {
+  width: 110px;
 }
 
 .other-box {
-  width: 700px;
-  height: 40px;
+  width: 800px;
+  height: 60px;
   border: 1px solid #888;
   display: flex;
   align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.subDetails-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  padding-left: 0;
+}
+
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--light-bg);
+  display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 0.6em;
+  color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+  overflow: hidden;
+}
+
+.name-id-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 150px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: var(--dark-red);
+}
+
+.id {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.mainDetails-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 600px;
+  padding-left: 0;
+}
+
+.college, .mainSub, .session-completed, .points, .rank {
+  font-size: 0.9em;
+  color: var(--dark-red);
+  white-space: nowrap;
+  width: 120px;
+  text-align: left;
 }
 
 /* MAIN SECTION */
