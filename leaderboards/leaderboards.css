@@ -111,7 +111,6 @@
 
 /* MAIN CONTAINER */
 .mainContainer{
-  border: 3px solid var(--dark-red);
   width: 92%;
   margin-left: 8%;
   border-radius: 30px;
