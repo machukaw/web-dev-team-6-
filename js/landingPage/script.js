@@ -44,7 +44,7 @@ $(document).on('submit', '#signin-form', function (e) {
 
   if (isValid) {
     if (email === 'admin@wmsu.edu.ph' && password === 'admin12345') {
-      window.location.href = 'adminPage.html';
+      window.location.href = 'AdminHTML/AdminHome.html';
     } else if (email === 'user@wmsu.edu.ph' && password === 'user12345') {
       window.location.href = 'UserHTML/Home.html';
     } else {
