@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminPage/alert.css">
+    <title>Update</title>
+</head>
+<body>
+  <nav class="nav__cont">
+    <ul class="nav">
+      <li class="nav__items " id="home">
+        <img src="../image\landingPage\icons\homeIcon.png" alt="">
+        <a href="adminHome.html">Home</a>
+      </li>
+      
+      <li class="nav__items " id="search">
+        <img src="../image/landingPage/icons/report (2).png" alt="">
+        <a href="report.html">Reports</a>
+      </li>
+      <li class="nav__items ">
+        <img src="../image/landingPage/icons/update.png" alt="">
+       <a href="alert.html">Update Notes</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+        <div class="mainContainer">
+          <div class="logo">
+            <h1>Patch Note Announcement</h1>
+          </div>
+          <div class="title">
+            <input class="Title" placeholder="Enter a title..." />
+          </div>
+    
+          <div class="dis">
+            <textarea class="dis1" placeholder="Write your description here..."></textarea>
+          </div>
+    
+          <div class="button">
+            <button class="button-1" onclick="submitPost()">Submit</button>
+          </div>
+    
+          <div class="confirmation" id="confirmation">✅ Post submitted successfully!</div>
+    
+          <div class="extra-section">
+            <h2 style="text-align: center;">Recent Posts</h2>
+            <div class="box">📌 How to build a sidebar in HTML/CSS</div>
+            <div class="box-1">📌 Tips for making responsive layouts</div>
+            <div class="box">📌 JavaScript tricks to enhance UX</div>
+          </div>
+      </div>
+  </main>
+  <script src="../js/landingPage/alert.js"></script>
+</body>
+</html>
