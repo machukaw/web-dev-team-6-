@@ -1,163 +1,189 @@
-*{
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  :root {
-    --dark-red: #7D0A0A;
-    --light-red: #BF3131;
-    --gold: #EAD196;
-    --light-bg: #EEEEEE;
-  }
-  
-  .nav__cont {
-      position: fixed;
-      width: 60px;
-      top: 0;
-      height: 100vh;
-      z-index: 100;
-      background-color: #7D0A0A;
-      overflow: hidden;
-      transition: width 0.3s ease;
-      cursor: pointer;
-      box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.4);
-  
-      &:hover {
-        width: 300px;
-      }
-    
-      @media screen and (min-width: 600px) {
-        width: 80px;
-      }
-    }
-    
-    .nav {
-      list-style-type: none;
-      color: #EEEEEE; 
-    
-      &:first-child {
-        padding-top: 0.5rem;
-      }
-    }
-    
-    body{
-      background-color: #EEEEEE;
-    }
-    
-    .nav__items {
-      padding-bottom: 2rem;
-      font-family: 'Roboto', sans-serif;
-    
-      a {
-        position: relative;
-        display: block;
-        top: -35px;
-        padding-left: 25px;
-        padding-right: 15px;
-        margin-left: 25px;
-        margin-right: 10px;
-        text-decoration: none;
-        color: #EEEEEE;
-        font-weight: 300;
-        font-size: 2em;
-        transition: all 0.3s ease;
-    
-        &:after {
-          content: '';
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 2px;
-          background: radial-gradient(circle at 94.02% 88.03%, #BF3131, transparent 100%);
-          opacity: 0;
-          transition: all 0.5s ease;
-          z-index: -10;
-        }
-      }
-    
-      &:hover a {
-        color: #EAD196;
-      }
-    
-      &:hover a:after {
-        opacity: 1;
-      }
-    
-      img {
-        width: 26px;
-        height: 26px;
-        position: relative;
-        left: -25px;
-        cursor: pointer;
-        fill: #EEEEEE;
-    
-        transition: fill 0.3s ease;
-    
-        @media screen and (min-width: 600px) {
-          width: 32px;
-          height: 32px;
-          left: -15px;
-        }
-      }
-    
-      &:hover svg {
-        fill: #EAD196; 
-      }
-    }
- .report{
-    display: flex;
-    justify-content: center;
- }
- 
- .box{
-    height: 300px;
-    width: 800px;
-    background-color: #a01b1b;
-    border: 6px solid black;
-    border-radius: 30px;
- }
- .title{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    background-color: #7D0A0A;
-    color: #EEEEEE;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border: 3px solid rgb(180, 180, 180);
- }
+:root {
+  --dark-red: #7D0A0A;
+  --light-red: #BF3131;
+  --gold: #EAD196;
+  --light-bg: #EEEEEE;
+  --white: #fff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
- .responded{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
- }
- .box-1{
-    height: 340px;
-    width: 600px;
-    background-color: #a01b1b;
-    border: 6px solid black;
-    border-radius: 30px;
- }
- .title-1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    background-color: #7D0A0A;
-    color: #EEEEEE;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border: 3px solid rgb(180, 180, 180);
- }
- .mainContainer{
+*{
+
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-bg);
+}
+
+/* NAVIGATION - OPTIONAL, YOU MAY ALREADY HAVE THIS */
+.nav__cont {
+  position: fixed;
+  width: 60px;
+  height: 100vh;
+  background-color: var(--dark-red);
+  box-shadow: 4px 7px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 100;
+}
+
+.nav__cont:hover {
+  width: 300px;
+}
+
+.nav {
+  list-style: none;
+  color: var(--light-bg);
+  padding: 1rem;
+}
+
+.nav__items {
+  padding-bottom: 2rem;
+}
+
+.nav__items a {
+  color: var(--light-bg);
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav__items img {
+  width: 26px;
+  height: 26px;
+}
+
+/* MAIN LAYOUT */
+.mainContainer {
   width: 92%;
   margin-left: 8%;
+  padding-top: 2rem;
   display: flex;
-  align-items: center;
-  background-color: #EEEEEE;
   flex-direction: column;
+  gap: 2rem;
+}
+
+.report,
+.responded {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* BOX STYLES */
+.box,
+.box-1 {
+  background-color: var(--light-red);
+  border: 4px solid var(--dark-red);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title,
+.title-1 {
+  background-color: var(--dark-red);
+  color: var(--light-bg);
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* SCROLLABLE CONTAINER INSIDE BOXES */
+.scroll-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--dark-red);
+  border-radius: 5px;
+}
+
+/* CARD STYLES */
+.card {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid var(--gold);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD TEXT */
+.card h4 {
+  font-size: 1.1rem;
+  color: var(--dark-red);
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.status-badge.online {
+  background-color: var(--gold);
+  color: var(--dark-red);
+}
+
+.status-badge.offline {
+  background-color: #eee;
+  color: var(--light-red);
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media screen and (max-width: 768px) {
+  .box,
+  .box-1 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .status-badge {
+    align-self: flex-end;
+  }
 }
