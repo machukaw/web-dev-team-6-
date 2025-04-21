@@ -1,69 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.querySelector('input[type="text"]');
-  const searchBtn = document.querySelector('input[type="button"]');
-  const collegeFilter = document.querySelector('select[name="Colleges"]');
-  const sortSelect = document.querySelector('select[name="ssort"]');
-  const posts = document.querySelectorAll('.card.post');
+$(document).ready(function () {
+  const $searchInput = $('input[type="text"]');
+  const $searchBtn = $('input[type="button"]');
+  const $collegeFilter = $('select[name="Colleges"]');
+  const $sortSelect = $('select[name="ssort"]');
+  const $posts = $('.card.post');
+  const $container = $('#postsContainer');
 
-  const filterPosts = () => {
-    const searchValue = searchInput.value.toLowerCase();
-    const collegeValue = collegeFilter.value;
-    const sortedBy = sortSelect.value;
+  function filterPosts() {
+    const searchValue = $searchInput.val().toLowerCase();
+    const collegeValue = $collegeFilter.val();
+    const sortedBy = $sortSelect.val();
 
-    let postArray = Array.from(posts);
-    
-    postArray.forEach(post => {
-      const subject = post.querySelector('.subject-display').textContent.toLowerCase();
-      const college = post.querySelector('.college').textContent.toLowerCase();
+    let $filteredPosts = $posts.filter(function () {
+      const $post = $(this);
+      const subject = $post.find('.subject-display').text().toLowerCase();
+      const college = $post.find('.college').text().toLowerCase();
 
       const matchesSearch = subject.includes(searchValue);
       const matchesCollege = !collegeValue || college.includes(collegeValue);
 
-      post.style.display = (matchesSearch && matchesCollege) ? 'block' : 'none';
+      return matchesSearch && matchesCollege;
     });
 
+    $posts.hide(); // Hide all posts initially
+    $filteredPosts.show(); // Show only filtered posts
+
     if (sortedBy === 'tutor points') {
-      postArray.sort((a, b) => {
-        const pointsA = parseInt(a.querySelector('.points').textContent.split(': ')[1]);
-        const pointsB = parseInt(b.querySelector('.points').textContent.split(': ')[1]);
+      $filteredPosts = $filteredPosts.sort(function (a, b) {
+        const pointsA = parseInt($(a).find('.points').text().split(': ')[1]);
+        const pointsB = parseInt($(b).find('.points').text().split(': ')[1]);
         return pointsB - pointsA;
       });
     } else if (sortedBy === 'date') {
-      postArray.sort((a, b) => {
-        const dateA = new Date(a.querySelector('.date-label').textContent.split(': ')[1]);
-        const dateB = new Date(b.querySelector('.date-label').textContent.split(': ')[1]);
+      $filteredPosts = $filteredPosts.sort(function (a, b) {
+        const dateA = new Date($(a).find('.date-label').text().split(': ')[1]);
+        const dateB = new Date($(b).find('.date-label').text().split(': ')[1]);
         return dateA - dateB;
       });
     }
 
-    const container = document.getElementById('postsContainer');
-    container.innerHTML = '';
-    postArray.forEach(post => container.appendChild(post));
-  };
+    $container.empty().append($filteredPosts);
+  }
 
-  searchBtn.addEventListener('click', filterPosts);
-  collegeFilter.addEventListener('change', filterPosts);
-  sortSelect.addEventListener('change', filterPosts);
+  $searchBtn.on('click', filterPosts);
+  $collegeFilter.on('change', filterPosts);
+  $sortSelect.on('change', filterPosts);
 
   // Booking Confirmation Logic
-  document.querySelectorAll('.book-now').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const overlay = btn.nextElementSibling;
-      overlay.style.display = 'block';
-    });
+  $('.book-now').on('click', function () {
+    $(this).next('.confirm-overlay').show();
   });
 
-  document.querySelectorAll('.confirm-no').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.closest('.confirm-overlay').style.display = 'none';
-    });
+  $('.confirm-no').on('click', function () {
+    $(this).closest('.confirm-overlay').hide();
   });
 
-  document.querySelectorAll('.confirm-yes').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.card');
-      card.remove(); // remove from DOM
-      // Optional: Add to notification section here
-    });
+  $('.confirm-yes').on('click', function () {
+    $(this).closest('.card').remove();
+    // Optional: Add to notification section here
   });
 });

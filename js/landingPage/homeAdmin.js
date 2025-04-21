@@ -1,23 +1,24 @@
-  // Scroll animation for cards
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+$(function () {
+    // Scroll animation for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          $(entry.target).addClass("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
     });
-  }, {
-    threshold: 0.1
-  });
 
-  document.querySelectorAll('.card, .container').forEach(el => {
-    el.classList.add("fade-in");
-    observer.observe(el);
-  });
+    $(".card, .container").each(function () {
+      $(this).addClass("fade-in");
+      observer.observe(this);
+    });
 
-  // Button interaction feedback
-  document.querySelectorAll("button, .btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      btn.classList.add("clicked");
-      setTimeout(() => btn.classList.remove("clicked"), 200);
+    // Button interaction feedback
+    $("button, .btn").on("click", function () {
+      const $btn = $(this);
+      $btn.addClass("clicked");
+      setTimeout(() => $btn.removeClass("clicked"), 200);
     });
   });
