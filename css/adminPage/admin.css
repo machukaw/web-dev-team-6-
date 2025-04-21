@@ -194,3 +194,315 @@ body {
   background-color: #dc3545;
   color: white;
 }
+
+
+.streak-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.streak-flame {
+  width: 100px;
+  height: 100px;
+  background-color: #b30000; /* Crimson Flame */
+  border-radius: 50% 50% 40% 40%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.streak-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.streak-days {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.day {
+  background-color: #b30000;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.streak-text h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.streak-text p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.idle-animation {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media screen and (max-width: 600px) {
+  .streak-days {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .streak-flame {
+    width: 80px;
+    height: 80px;
+  }
+
+  .streak-count {
+    font-size: 2rem;
+  }
+}
+
+/* Enhanced Sizes for Streak + Leaderboard */
+
+.streak-tracker {
+  flex: 1 1 400px;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.flame-circle {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+}
+
+.day {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.leaderboard {
+  flex: 1 1 500px;
+  max-width: 550px;
+  padding: 30px;
+}
+
+.leaderboard h3 {
+  font-size: 24px;
+}
+
+.leaderboard-entry {
+  padding: 14px;
+}
+
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.info input {
+  font-size: 16px;
+}
+
+.points-wrap input {
+  font-size: 16px;
+}
+
+.points-wrap {
+  font-size: 16px;
+}
+
+.edit-btn {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+/* Responsive adjustment remains intact */
+@media (max-width: 768px) {
+  .tracker-leaderboard-wrapper {
+    flex-direction: column;
+  }
+}
+
+.moderation-panel {
+  background-color: #fff0f3;
+  padding: 30px;
+  border-radius: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 400px;
+  font-family: 'Arial', sans-serif;
+}
+
+.moderation-panel h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #c8102e;
+  text-align: center;
+}
+
+.student-entry {
+  background: white;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #c8102e;
+}
+
+.student-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #c8102e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.course {
+  font-size: 14px;
+  color: #666;
+}
+
+.student-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reports {
+  color: #c8102e;
+  font-weight: bold;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: transform 0.2s;
+}
+
+.actions .approve {
+  color: green;
+}
+
+.actions .ban {
+  color: red;
+}
+
+.actions button:hover {
+  transform: scale(1.2);
+}
+
+.banned-users-section {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #fff0f3;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.banned-users-section h2 {
+  text-align: center;
+  color: #c8102e;
+  margin-bottom: 20px;
+}
+
+.banned-users-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.banned-user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 12px;
+  border-left: 5px solid #c8102e;
+  margin-bottom: 12px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #c8102e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.ban-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.unban-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.unban-button:hover {
+  background-color: darkgreen;
+}

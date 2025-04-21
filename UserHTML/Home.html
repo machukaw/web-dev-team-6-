@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/userPage/user.css" />
+</head>
+<body>
+  <!-- Here kuha ng nav -->
+      <nav class="nav__cont">
+        <ul class="nav">
+          <li class="nav__items " id="home">
+            <img src="../image\landingPage\icons\homeIcon.png" alt="">
+            <a href="Home.html">Home</a>
+          </li>
+          
+          <li class="nav__items " id="search">
+            <img src="../image/landingPage/icons/searchIcon.png" alt="">
+            <a href="search1.html">Search</a>
+          </li>
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/schedIcon.png" alt="">
+           <a href="sched.html">Schedule</a>
+          </li>
+            
+          <li class="nav__items ">
+             <img src="../image/landingPage/icons/quizIcon.png" alt="">
+             <a href="quiz.html">Quiz</a>
+          </li>
+          
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/leadIcon.png" alt="">
+           <a href="">Leaderboard</a>
+          </li>
+          
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/profile-user.png" alt="">
+            <a href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </nav>
+    <!-- Till here -->
+    <main>
+      <div class="mainContainer">
+        <div class="feed">
+          <div class="logo">
+            <h1>Looking For Tutor</h1>
+          </div>
+          <div class="addPost">
+            <button id="showFormBtn">Set/Post Tutoring Session</button>
+          
+            <div id="formContent" style="display: none;">
+              <div class="top-section">
+                <div class="image-circle">
+                  <img src="../image/landingPage/ando.png" alt="">
+                </div>
+                <div class="subject-input">
+                  <input type="text" id="subject" placeholder="Input Subject">
+                </div>
+              </div>
+          
+              <div class="bottom-section">
+                <div class="form-group">
+                  <label for="date">Set Meeting Date</label>
+                  <input type="date" id="date">
+                </div>
+          
+                <div class="form-group">
+                  <label for="timeIn">Set Time In</label>
+                  <input type="time" id="timeIn">
+                </div>
+          
+                <div class="form-group">
+                  <label for="timeOut">Set Time Out</label>
+                  <input type="time" id="timeOut">
+                </div>
+          
+                <div class="form-group">
+                  <button id="postBtn" disabled>Post</button>
+                </div>
+              </div>
+          
+              <p id="message"></p>
+            </div>
+          </div>
+          <div class="post" id="postsContainer"><div id="noPostMessage">
+            <h2>NO POST YET</h2>
+            <div class="no-post-image-container">
+              <img src="../image/landingPage/noPost.gif" alt="No Posts Illustration" />
+            </div>
+          </div></div>
+
+        </div>
+        <div class="dash" id="notificationsContainer"></div>
+
+      </div>       
+    </main>
+    <script src="../js/landingPage/user.js"></script>
+</body>
+</html>

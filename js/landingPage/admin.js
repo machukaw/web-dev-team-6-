@@ -99,3 +99,11 @@ function deleteUser(index) {
 
 // Render the initial table
 document.addEventListener("DOMContentLoaded", renderUserTable);
+
+  // Show the streak section only on the dashboard or based on condition
+  window.addEventListener('DOMContentLoaded', () => {
+    const showStreak = window.location.pathname.includes('dashboard'); // Adjust as needed
+    if (showStreak) {
+      document.getElementById('streak-tracker').style.display = 'block';
+    }
+  });

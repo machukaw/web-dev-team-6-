@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../css/userPage/search1.css" />
+</head>
+<body>
+  <nav class="nav__cont">
+    <ul class="nav">
+      <li class="nav__items " id="home">
+        <img src="../image\landingPage\icons\homeIcon.png" alt="">
+        <a href="Home.html">Home</a>
+      </li>
+      
+      <li class="nav__items " id="search">
+        <img src="../image/landingPage/icons/searchIcon.png" alt="">
+        <a href="search1.html">Search</a>
+      </li>
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/schedIcon.png" alt="">
+            <a href="sched.html">Schedule</a>
+          </li>
+            
+          <li class="nav__items ">
+             <img src="../image/landingPage/icons/quizIcon.png" alt="">
+             <a href="quiz.html">Quiz</a>
+          </li>
+          
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/leadIcon.png" alt="">
+           <a href="">Leaderboard</a>
+          </li>
+          
+          <li class="nav__items ">
+            <img src="../image/landingPage/icons/profile-user.png" alt="">
+            <a href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </nav>
+    
+    <main>
+      <div class="mainContainer">
+        <div class="logo">
+            <h1>Searhing For Tutor</h1>
+          </div>
+            <form action="">
+                <input type="text" placeholder="Search subject here">
+                <input type="button" value="Search">
+            </form>
+        <div class="sortNfilter">
+            <div class="filter">
+                <label for="Colleges">Filter by College: </label>
+                <select name="Colleges">
+                  <option value="">All College</option>
+                  <option value="computing studies">College of Computing Studies</option>
+                  <option value="liberal arts">College of Liberal Arts</option>
+                  <option value="engineering">College of Engineering</option>
+                  <option value="architecture">College of Architecture</option>
+                  <option value="public administration">College of Public Administration</option>
+                  <option value="teacher education">College of Teacher Education</option>
+                  <option value="home economics">College of Home Economics</option>
+                  <option value="nursing">College of Nursing</option>
+                  <option value="law">College of Law</option>
+                  <option value="criminal justice">College of Criminal Justice Education</option>
+                  <option value="medicine">College of Medicine</option>
+                  <option value="asian islamic studies">College of Asian Islamic Studies</option>
+                  <option value="social work">College of Social Work and Development</option>
+                  <option value="sports science">College of Sports Science and Phisical Education</option>
+                  <option value="science and mathematics">College of Science and Mathematics</option>
+                </select>
+            </div>
+            <div class="sort">
+                <label for="sort">Sort by: </label>
+                <select name="ssort">
+                  <option value="tutor points">Tutor Points</option>
+                  <option value="date">Date</option>
+                </select>                
+            </div>
+        </div>
+        <div id="postsContainer">
+            <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Reyes, Carlos D.</div>
+                    <div class="studentID">ID: 2025-03872</div>
+                    <div class="college"><em>College of Sports Science and Phisical Education</em></div>
+                    <div class="points">Tutoring Points: 290</div>
+                  </div>
+                </div>
+                <div class="subject-display">Sports Psychology</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 9:00 AM - 11:00 AM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Santiago, Marie L.</div>
+                    <div class="studentID">ID: 2025-03588</div>
+                    <div class="college"><em>College of Science and Mathematics</em></div>
+                    <div class="points">Tutoring Points: 310</div>
+                  </div>
+                </div>
+                <div class="subject-display">Calculus II</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 11:30 AM - 1:30 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Villanueva, Jason R.</div>
+                    <div class="studentID">ID: 2025-03901</div>
+                    <div class="college"><em>College of Law</em></div>
+                    <div class="points">Tutoring Points: 320</div>
+                  </div>
+                </div>
+                <div class="subject-display">Legal Research</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 2:00 PM - 4:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Dela Cruz, Hannah G.</div>
+                    <div class="studentID">ID: 2025-03145</div>
+                    <div class="college"><em>College of Public Administration</em></div>
+                    <div class="points">Tutoring Points: 295</div>
+                  </div>
+                </div>
+                <div class="subject-display">Public Policy</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 4:30 PM - 6:30 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Castillo, Ramon J.</div>
+                    <div class="studentID">ID: 2025-03378</div>
+                    <div class="college"><em>College of Teacher Education</em></div>
+                    <div class="points">Tutoring Points: 305</div>
+                  </div>
+                </div>
+                <div class="subject-display">Educational Technology</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 6:00 PM - 8:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Lopez, Maria K.</div>
+                    <div class="studentID">ID: 2024-05421</div>
+                    <div class="college"><em>College of Liberal Arts</em></div>
+                    <div class="points">Tutoring Points: 220</div>
+                  </div>
+                </div>
+                <div class="subject-display">Sociology</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-21</div>
+                  <div class="time-label"><strong>Time:</strong> 3:00 PM - 5:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Torres, Kevin R.</div>
+                    <div class="studentID">ID: 2024-01999</div>
+                    <div class="college"><em>College of Computing Studies</em></div>
+                    <div class="points">Tutoring Points: 310</div>
+                  </div>
+                </div>
+                <div class="subject-display">Data Structures</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-22</div>
+                  <div class="time-label"><strong>Time:</strong> 10:00 AM - 12:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Villanueva, Lance D.</div>
+                    <div class="studentID">ID: 2024-06781</div>
+                    <div class="college"><em>College of Engineering</em></div>
+                    <div class="points">Tutoring Points: 265</div>
+                  </div>
+                </div>
+                <div class="subject-display">Fluid Mechanics</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 9:00 AM - 11:00 AM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Rivera, Angelica P.</div>
+                    <div class="studentID">ID: 2024-02234</div>
+                    <div class="college"><em>College of Education</em></div>
+                    <div class="points">Tutoring Points: 200</div>
+                  </div>
+                </div>
+                <div class="subject-display">Curriculum Studies</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-24</div>
+                  <div class="time-label"><strong>Time:</strong> 2:00 PM - 4:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Gomez, Patricia M.</div>
+                    <div class="studentID">ID: 2024-06129</div>
+                    <div class="college"><em>College of Business and Management</em></div>
+                    <div class="points">Tutoring Points: 240</div>
+                  </div>
+                </div>
+                <div class="subject-display">Financial Management</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-25</div>
+                  <div class="time-label"><strong>Time:</strong> 11:00 AM - 1:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Delacruz, Nico J.</div>
+                    <div class="studentID">ID: 2024-07001</div>
+                    <div class="college"><em>College of Health Sciences</em></div>
+                    <div class="points">Tutoring Points: 270</div>
+                  </div>
+                </div>
+                <div class="subject-display">Anatomy</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-26</div>
+                  <div class="time-label"><strong>Time:</strong> 1:00 PM - 3:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Alvarez, Jerome B.</div>
+                    <div class="studentID">ID: 2024-04888</div>
+                    <div class="college"><em>College of Engineering</em></div>
+                    <div class="points">Tutoring Points: 290</div>
+                  </div>
+                </div>
+                <div class="subject-display">Computer-Aided Design</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-27</div>
+                  <div class="time-label"><strong>Time:</strong> 10:00 AM - 12:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Santiago, Bea R.</div>
+                    <div class="studentID">ID: 2024-03432</div>
+                    <div class="college"><em>College of Liberal Arts</em></div>
+                    <div class="points">Tutoring Points: 250</div>
+                  </div>
+                </div>
+                <div class="subject-display">Literature</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-28</div>
+                  <div class="time-label"><strong>Time:</strong> 4:00 PM - 6:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Fernandez, Joshua N.</div>
+                    <div class="studentID">ID: 2024-03888</div>
+                    <div class="college"><em>College of Computing Studies</em></div>
+                    <div class="points">Tutoring Points: 320</div>
+                  </div>
+                </div>
+                <div class="subject-display">Database Management</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-29</div>
+                  <div class="time-label"><strong>Time:</strong> 9:00 AM - 11:00 AM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Mendoza, Erika J.</div>
+                    <div class="studentID">ID: 2024-05555</div>
+                    <div class="college"><em>College of Architecture</em></div>
+                    <div class="points">Tutoring Points: 230</div>
+                  </div>
+                </div>
+                <div class="subject-display">Urban Planning</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-30</div>
+                  <div class="time-label"><strong>Time:</strong> 2:00 PM - 4:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Reyes, Julia M.</div>
+                    <div class="studentID">ID: 2025-03006</div>
+                    <div class="college"><em>College of Education</em></div>
+                    <div class="points">Tutoring Points: 280</div>
+                  </div>
+                </div>
+                <div class="subject-display">Curriculum Development</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 8:00 AM - 10:00 AM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Gomez, Aaron L.</div>
+                    <div class="studentID">ID: 2025-03007</div>
+                    <div class="college"><em>College of Engineering</em></div>
+                    <div class="points">Tutoring Points: 310</div>
+                  </div>
+                </div>
+                <div class="subject-display">Engineering Mathematics</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 10:30 AM - 12:30 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Santos, Mika P.</div>
+                    <div class="studentID">ID: 2025-03008</div>
+                    <div class="college"><em>College of Human Kinetics</em></div>
+                    <div class="points">Tutoring Points: 270</div>
+                  </div>
+                </div>
+                <div class="subject-display">Human Anatomy</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 1:00 PM - 3:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Navarro, Jake T.</div>
+                    <div class="studentID">ID: 2025-03009</div>
+                    <div class="college"><em>College of Social Sciences and Development</em></div>
+                    <div class="points">Tutoring Points: 295</div>
+                  </div>
+                </div>
+                <div class="subject-display">Political Science</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 3:30 PM - 5:30 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Yap, Bea L.</div>
+                    <div class="studentID">ID: 2025-03010</div>
+                    <div class="college"><em>College of Tourism and Hospitality Management</em></div>
+                    <div class="points">Tutoring Points: 260</div>
+                  </div>
+                </div>
+                <div class="subject-display">Hospitality Services</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 6:00 PM - 8:00 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card post">
+                <div class="top-section">
+                  <div class="image-circle">
+                    <img src="../image/landingPage/icons/noProfile.png" alt="Profile Image">
+                  </div>
+                  <div class="infos">
+                    <div class="name">Castillo, Ron M.</div>
+                    <div class="studentID">ID: 2025-03011</div>
+                    <div class="college"><em>Institute of Technology</em></div>
+                    <div class="points">Tutoring Points: 305</div>
+                  </div>
+                </div>
+                <div class="subject-display">Electrical Systems</div>
+                <div class="bottom-section">
+                  <div class="date-label"><strong>Date:</strong> 2025-04-23</div>
+                  <div class="time-label"><strong>Time:</strong> 8:30 PM - 10:30 PM</div>
+                  <button class="book-now">Book now</button>
+                  <div class="confirm-overlay">
+                    <p>Confirm Booking?</p>
+                    <button class="confirm-yes">Yes</button>
+                    <button class="confirm-no">No</button>
+                  </div>
+                </div>
+              </div>
+                            
+      </div>
+    </main>
+    <script src="../js/landingPage/search.js"></script>
+</body>
+</html>

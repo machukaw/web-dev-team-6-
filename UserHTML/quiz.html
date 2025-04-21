@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../css/userPage/quiz.css">
+</head>
+<body>
+  <nav class="nav__cont">
+    <ul class="nav">
+      <li class="nav__items " id="home">
+        <img src="../image\landingPage\icons\homeIcon.png" alt="">
+        <a href="Home.html">Home</a>
+      </li>
+      
+      <li class="nav__items " id="search">
+        <img src="../image/landingPage/icons/searchIcon.png" alt="">
+        <a href="search1.html">Search</a>
+      </li>
+      <li class="nav__items ">
+        <img src="../image/landingPage/icons/schedIcon.png" alt="">
+        <a href="sched.html">Schedule</a>
+      </li>
+        
+      <li class="nav__items ">
+         <img src="../image/landingPage/icons/quizIcon.png" alt="">
+        <a href="quiz.html">Quiz</a>
+      </li>
+      
+      <li class="nav__items ">
+        <img src="../image/landingPage/icons/leadIcon.png" alt="">
+       <a href="">Leaderboard</a>
+      </li>
+      
+      <li class="nav__items ">
+        <img src="../image/landingPage/icons/profile-user.png" alt="">
+        <a href="profile.html">Profile</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="mainContainer">
+    <div class="logo">
+      <h1>Quiz</h1>
+    </div>
+
+    <div class="sidebar">
+      <button onclick="switchRole('tutor')">Switch to Tutor</button>
+      <button onclick="switchRole('student')">Switch to Student</button>
+    </div>
+
+    <div class="content" id="contentArea">
+      <!-- Dynamic content will be loaded here -->
+    </div>
+  </div>
+  <div id="tutorView">
+    <h2>Previous Quiz:</h2>
+    <div class="quiz-list">
+      <!-- Sample Card -->
+      <div class="quiz-card">
+        <div class="avatar"></div>
+        <div class="quiz-info">
+          <p><strong>Name:</strong> Juan Dela Cruz</p>
+          <p><strong>ID:</strong> 20204-03655</p>
+          <p><strong>Subject:</strong> Math</p>
+          <p><strong>Items:</strong> 10</p>
+          <p><strong>Score:</strong> Not checked yet</p>
+        </div>
+        <button class="check-btn">Check</button>
+      </div>
+  
+      <!-- More cards can be dynamically added -->
+    </div>
+  
+    <button id="addQuizBtn">Add Quiz</button>
+  </div>
+  
+  <!-- Hidden by default: the Quiz Post Form -->
+  <div id="quizForm" style="display: none;">
+    <h2>Post a New Quiz</h2>
+    <input type="text" placeholder="Subject">
+    <input type="number" placeholder="No. of Items">
+    <textarea placeholder="Questions here..."></textarea>
+    <input type="text" placeholder="Student Assigned">
+    <button>Post Quiz</button>
+  </div>
+  <script src="../jquery-3.7.1.min.js"></script>
+  <script src="../js/landingPage/quiz.js"></script>
+</body>
+</html>
