@@ -45,6 +45,7 @@
   }
   
   body {
+    margin: 0;
       background-color: var(--light-bg);
   }
   
@@ -114,7 +115,6 @@
   
   /* MAIN CONTAINER */
   .mainContainer{
-    border: 3px solid var(--dark-red);
     width: 92%;
     height: 98vh;
     margin-left: 8%;

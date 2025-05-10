@@ -75,11 +75,13 @@ nav ul li a {
   align-items: center;
   margin-top: -1.8%;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   padding: 2% 4%;
   box-sizing: border-box;
+  background-image: url(../../image/landingPage/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 .hero-text {
   max-width: 50%;
   opacity: 0;
@@ -90,7 +92,7 @@ nav ul li a {
 
 .hero-text h1 {
   font-size: 4rem;
-  color: #7D0A0A;
+  color: #EEEEEE;
   line-height: 1.3;
 }
 
@@ -113,7 +115,7 @@ nav ul li a {
 
 .hero-text .animated-words-loop span {
   font-weight: bold;
-  color: #D71313;
+color: #EEEEEE;
   font-size: 4rem;
   height: 4.5rem;
   line-height: 4.5rem;
@@ -123,7 +125,7 @@ nav ul li a {
 
 .hero-text p {
   font-size: 1.6rem;
-  color: #BF3131;
+ color: #EAD196;
   margin: 1rem 0;
   overflow: hidden;
   border-right: 2px solid #BF3131;
@@ -141,8 +143,8 @@ nav ul li a {
 }
 
 .search-bar button {
-  background-color: #BF3131;
-  color: white;
+  background-color:#EAD196;
+  color:  #333;
   border: none;
   padding: 15px 20px;
   font-size: 1.2rem;
@@ -150,6 +152,10 @@ nav ul li a {
   width: 50%;
   cursor: pointer;
   transition: background 0.3s ease;
+}
+.search-bar button:hover {
+  background-color: #7D0A0A;
+  color: white;
 }
 
 #devs button {
