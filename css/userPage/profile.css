@@ -114,7 +114,6 @@
 .mainContainer{
   width: 92%;
   margin-left: 8%;
-  border: 5px solid var(--dark-red);
   border-radius: 30px;
   display: flex;
   flex-direction: column; 
